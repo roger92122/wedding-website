@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haoran & Chi - Wedding</title>
 
-    <!-- Font matching Squarespace-style serif -->
+    <!-- Wedding Serif Font -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="logo">Haoran & Chi</div>
         <ul class="nav-menu">
-            <li><a href="our-story.html">Our Ceremony</a></li>
-            <li><a href="accommodations.html">The Reception</a></li>
-            <li><a href="registry.html">The Registry</a></li>
-            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ceremony">Our Ceremony</a></li>
+            <li><a href="#reception">The Reception</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="hero-content">
             <h1>We’re Getting<br>Married</h1>
             <p>Tying the knot on April 26, 2026</p>
-            <button class="rsvp-button" onclick="goToRSVP()">− RSVP −</button>
+            <button class="rsvp-button" onclick="document.querySelector('#rsvp').scrollIntoView({ behavior: 'smooth' });">− RSVP −</button>
         </div>
     </header>
+
+    <!-- CEREMONY SECTION -->
+    <section id="ceremony" class="section">
+        <h2>Our Ceremony</h2>
+        <p>
+            Join us as we say “I do” in a beautiful outdoor ceremony overlooking the mountains.
+            More details about the time, dress code, and location can be added here.
+        </p>
+    </section>
+
+    <!-- RECEPTION SECTION -->
+    <section id="reception" class="section">
+        <h2>The Reception</h2>
+        <p>
+            Celebrate with us afterward for dinner, music, and dancing.
+            You may add venue information, parking details, and schedule here.
+        </p>
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section id="rsvp" class="section">
+        <h2>RSVP</h2>
+
+        <form id="rsvp-form">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+
+            <select id="attendance">
+                <option value="yes">Will attend</option>
+                <option value="no">Cannot attend</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="confirmation"></p>
+    </section>
 
     <footer class="footer">© 2026 Haoran & Chi</footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
