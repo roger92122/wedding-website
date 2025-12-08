@@ -1,4 +1,4 @@
-// Handle RSVP form
+// RSVP FORM HANDLER
 document.getElementById("rsvp-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
