@@ -1,4 +1,8 @@
 // RSVP FORM HANDLER
+html {
+    scroll-behavior: smooth;
+}
+
 document.getElementById("rsvp-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -14,3 +18,4 @@ document.getElementById("rsvp-form").addEventListener("submit", function (e) {
 
     this.reset();
 });
+
