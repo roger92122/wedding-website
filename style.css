@@ -256,7 +256,7 @@ body {
 
     /* shift hero image even more to the right */
     .hero {
-        background-position: 75% center;
+        background-position: 60% 40%;;
     }
 
     /* move text slightly higher */
@@ -285,6 +285,7 @@ body {
         height: 300px;
     }
 }
+
 
 
 
