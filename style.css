@@ -174,23 +174,22 @@ body {
         font-size: 14px;
     }
 
-    /* HERO FIXES — move text up + shift image left */
+    /* HERO — shift image RIGHT + lift text UP */
     .hero {
         height: 70vh;
         padding: 0 15px;
 
-        /* Shift image toward the left so bride isn't cropped */
-        background-position: 30% center;
-        
-        /* Center the content vertically */
+        /* shift focus to the RIGHT side of the image */
+        background-position: 70% center;
+
         display: flex;
         justify-content: center;
         text-align: center;
     }
 
-    /* Move the hero text UP */
+    /* move the hero text upward */
     .hero-content {
-        margin-top: -40px;  /* adjust between -20px to -60px */
+        margin-top: -80px; /* adjust to -60 / -100 based on your preference */
     }
 
     .hero-content h1 {
@@ -208,7 +207,7 @@ body {
         font-size: 16px;
     }
 
-    /* SECTIONS */
+    /* SECTION LAYOUT */
     .section {
         margin: 20px;
         padding: 30px 20px;
@@ -218,10 +217,11 @@ body {
         font-size: 28px;
     }
 
-    /* EVENT IMAGES — square styling maintained */
+    /* EVENT IMAGES — still square */
     .event-image {
         width: 240px;
         height: 240px;
+        object-fit: cover;
     }
 
     .event-time {
@@ -254,6 +254,16 @@ body {
    ============================================ */
 @media (max-width: 480px) {
 
+    /* shift hero image even more to the right */
+    .hero {
+        background-position: 75% center;
+    }
+
+    /* move text slightly higher */
+    .hero-content {
+        margin-top: -90px;
+    }
+
     .logo {
         font-size: 22px;
     }
@@ -268,10 +278,6 @@ body {
 
     .hero-content h1 {
         font-size: 32px;
-    }
-
-    .hero {
-        background-position: 35% center; /* slight extra shift for small screens */
     }
 
     .event-image {
