@@ -38,10 +38,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
-            smoothScrollTo(target, 1700, 80); // <-- YOU CAN ADJUST OFFSET HERE
+            smoothScrollTo(target, 1700, 40); // <-- YOU CAN ADJUST OFFSET HERE
         }
     });
 });
+
 
 
 
