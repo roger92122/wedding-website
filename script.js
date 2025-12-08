@@ -1,7 +1,7 @@
 /* ============================================================
    Custom Slow Smooth Scroll WITH NAVBAR OFFSET
    ============================================================ */
-function smoothScrollTo(target, duration = 1500, offset = 100) {
+function smoothScrollTo(target, duration = 1500, offset = 80) {
 
     const start = window.pageYOffset;
     const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
@@ -38,10 +38,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
-            smoothScrollTo(target, 1500, 90); // <-- YOU CAN ADJUST OFFSET HERE
+            smoothScrollTo(target, 1700, 80); // <-- YOU CAN ADJUST OFFSET HERE
         }
     });
 });
+
 
 
 
