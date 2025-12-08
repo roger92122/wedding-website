@@ -180,7 +180,7 @@ body {
         padding: 0 15px;
 
         /* shift focus to the RIGHT side of the image */
-        background-position: 60% center;
+        background-position: 65% 40%;;
 
         display: flex;
         justify-content: center;
@@ -285,6 +285,7 @@ body {
         height: 300px;
     }
 }
+
 
 
 
