@@ -194,20 +194,26 @@ body {
     gap: 8px;
 }
 
+/* Force equal button size */
 .lang-btn {
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #999;
-    background: white;
-    cursor: pointer;
-    border-radius: 4px;
+    width: 52px;          /* NEW: fixed width ensures perfect symmetry */
+    height: 36px;         /* optional but helps equalize height */
+    padding: 0;           /* remove uneven padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.lang-btn.active {
-    background: #333;
-    color: white;
-    border-color: #333;
+/* Slightly reduce Chinese font size */
+#lang-zh {
+    font-size: 13px;      /* Chinese characters run larger */
 }
+
+/* English button stays as is */
+#lang-en {
+    font-size: 14px;
+}
+
 
 /* ============================================
    MOBILE RESPONSIVE DESIGN
@@ -327,3 +333,4 @@ body {
         height: 300px;
     }
 }
+
