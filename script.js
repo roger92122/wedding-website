@@ -51,6 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".lang-zh").forEach(el => el.style.display = "block");
     });
 });
+/* ============================================================
+   PLUS ONE LOGIC
+   ============================================================ */
+   const checkboxEN = document.getElementById("plus-one-checkbox");
+   const checkboxZH = document.getElementById("plus-one-checkbox-zh");
+   
+   const guestInputEN = document.getElementById("plus-one-name");
+   const guestInputZH = document.getElementById("plus-one-name-zh");
+   
+   // English checkbox
+   checkboxEN.addEventListener("change", () => {
+       guestInputEN.style.display = checkboxEN.checked ? "block" : "none";
+   });
+   
+   // Chinese checkbox
+   checkboxZH.addEventListener("change", () => {
+       guestInputZH.style.display = checkboxZH.checked ? "block" : "none";
+   });
 
 /* ============================================================
    Attach to nav links (with mobile/desktop offsets)
@@ -68,3 +86,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         smoothScrollTo(target, 1700, offset);
     });
 });
+
