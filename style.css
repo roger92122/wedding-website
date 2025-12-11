@@ -93,14 +93,13 @@ body {
 /* CEREMONY & RECEPTION */
 /* EVENT IMAGES — FORCE PERFECT SQUARE */
 .event-image {
-    width: 400px;          /* size of the square */
-    height: 400px;         /* same as width → square */
-    object-fit: cover;     /* crop image evenly */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     display: block;
     margin: 0 auto 40px auto;
     border-radius: 4px;
 }
-
 
 .event-time {
     font-size: 20px;
@@ -139,6 +138,9 @@ body {
 #rsvp-form select {
     padding: 12px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
 }
 
 #rsvp-form button {
@@ -148,35 +150,33 @@ body {
     border: none;
     cursor: pointer;
 }
-/* Plus One Section */
+
+/* ============================================
+   FIXED PLUS-ONE SECTION (FINAL VERSION)
+   ============================================ */
 .plus-one {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: left;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%; /* FIXED — aligns with RSVP form */
 }
 
 .plus-one-label {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-left: 4px;      /* Matches form padding */
-    font-size: 18px;        /* Match your form font */
+    font-size: 16px; /* match input text size */
+    padding-left: 0; /* FIXED — remove unwanted indent */
 }
-
 
 .plus-one-input {
-    width: 100%;
-    padding: 14px;
+    width: 100%; /* EXACT match with RSVP input */
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-top: 8px;
     border-radius: 3px;
+    margin-top: 8px;
+    box-sizing: border-box;
 }
-
-
 
 /* FOOTER */
 .footer {
@@ -184,6 +184,7 @@ body {
     padding: 40px;
     color: #777;
 }
+
 /* Language Switcher */
 .language-switcher {
     position: absolute;
@@ -213,7 +214,6 @@ body {
    ============================================ */
 @media (max-width: 900px) {
 
-    /* NAVIGATION */
     .logo {
         font-size: 26px;
     }
@@ -226,29 +226,23 @@ body {
         font-size: 14px;
     }
 
-    /* HERO — shift image RIGHT + lift text UP */
+    /* HERO — shift image & adjust text on mobile */
     .hero {
         height: 70vh;
         padding: 0 15px;
-         /* Horizontal crop (slight shift left) */
         background-position-x: 60%;
-
-        /* Vertical crop (move couple LOWER) */
         background-position-y: 55%;
-
         display: flex;
         justify-content: center;
         text-align: center;
     }
 
-    /* move the hero text upward */
     .hero-content {
-        margin-top: -110px; /* adjust to -60 / -100 based on your preference */
+        margin-top: -110px;
     }
 
     .hero-content h1 {
         font-size: 40px;
- 
     }
 
     .hero-content p {
@@ -261,7 +255,6 @@ body {
         font-size: 16px;
     }
 
-    /* SECTION LAYOUT */
     .section {
         margin: 20px;
         padding: 30px 20px;
@@ -271,11 +264,9 @@ body {
         font-size: 28px;
     }
 
-    /* EVENT IMAGES — still square */
     .event-image {
         width: 240px;
         height: 240px;
-        object-fit: cover;
     }
 
     .event-time {
@@ -294,7 +285,6 @@ body {
         font-size: 16px;
     }
 
-    /* RSVP FORM */
     #rsvp-form input,
     #rsvp-form select,
     #rsvp-form button {
@@ -304,16 +294,14 @@ body {
 }
 
 /* ============================================
-   EXTRA SMALL DEVICES (iPhone SE, older phones)
+   EXTRA SMALL DEVICES (iPhone SE)
    ============================================ */
 @media (max-width: 480px) {
 
-    /* shift hero image even more to the right */
     .hero {
-        background-position: 60% 40%;;
+        background-position: 60% 40%;
     }
 
-    /* move text slightly higher */
     .hero-content {
         margin-top: -90px;
     }
@@ -339,19 +327,3 @@ body {
         height: 300px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
