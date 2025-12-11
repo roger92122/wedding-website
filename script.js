@@ -26,6 +26,30 @@ function smoothScrollTo(target, duration = 1500, offset = 80) {
             requestAnimationFrame(animation);
         }
     }
+   
+   /* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+
+const btnEN = document.getElementById("lang-en");
+const btnZH = document.getElementById("lang-zh");
+
+btnEN.addEventListener("click", () => {
+    btnEN.classList.add("active");
+    btnZH.classList.remove("active");
+
+    document.querySelectorAll(".lang-en").forEach(el => el.style.display = "block");
+    document.querySelectorAll(".lang-zh").forEach(el => el.style.display = "none");
+});
+
+btnZH.addEventListener("click", () => {
+    btnZH.classList.add("active");
+    btnEN.classList.remove("active");
+
+    document.querySelectorAll(".lang-en").forEach(el => el.style.display = "none");
+    document.querySelectorAll(".lang-zh").forEach(el => el.style.display = "block");
+});
+
 
     requestAnimationFrame(animation);
 }
@@ -51,3 +75,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         smoothScrollTo(target, 1700, offset);
     });
 });
+
