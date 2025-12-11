@@ -158,19 +158,24 @@ body {
 }
 
 .plus-one-label {
-    font-size: 16px;
-    margin-bottom: 10px;
-    display: block;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 4px;      /* Matches form padding */
+    font-size: 18px;        /* Match your form font */
 }
 
+
 .plus-one-input {
-    width: 100%;              /* same width */
-    padding: 12px;            /* same padding */
-    font-size: 16px;          /* same text size */
-    margin-top: 10px;
-    box-sizing: border-box;   /* ensures exact match */
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 8px;
+    border-radius: 3px;
 }
+
 
 
 /* FOOTER */
@@ -334,6 +339,7 @@ body {
         height: 300px;
     }
 }
+
 
 
 
